@@ -161,7 +161,7 @@ export default class SfpegRecordEditFlw extends LightningElement {
         this.lastModif = fieldName + ' from ' + oldValue + ' to ' + newValue;
         if (this.isDebug) console.log('handleChange: lastModif tracked ', this.lastModif);
 
-        this.newRecord[fieldName] = newValue;
+        this.newRecord[fieldName] = newValue?newValue:null;
         if (this.isDebug) console.log('handleChange: newRecord updated', this.newRecord[fieldName]);
         if (this.isDebug) console.log('handleChange: newRecord updated', JSON.stringify(this.newRecord));
 
